@@ -141,7 +141,8 @@ MAILERS = {
             "port": 587,
             "use_tls" :True,
             "username" : config("MY_EMAIL"),
-            "password" : config("HOST_PASSWORD") 
+            "password" : config("HOST_PASSWORD") ,
+            "timeout" : 10
         },
         
     },
