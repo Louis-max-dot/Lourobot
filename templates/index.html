@@ -1,0 +1,350 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LouRobot Sales Home</title>
+    <link rel="stylesheet" href="{% static 'css/home.css'%}" />
+  </head>
+  <body>
+    <header class="navlogo">
+      <div class="logo">
+        <img src="{% static 'images/robot.jpeg' %}" alt="" />
+        <h2>LouRobot</h2>
+      </div>
+      <div class="menu">
+        <img src="{% static 'images/icon-menu.svg' %}" alt="" />
+      </div>
+
+      <nav>
+        <ul>
+          <div class="close">
+            <img src="../static/images/icon-menu-close.svg" alt="" />
+          </div>
+          <li><a href="" class="active">Home</a></li>
+          <li><a href="" class="wrapper">Solutions</a></li>
+          <!-- <li><a href="./carrer.html">Careers</a></li> -->
+        </ul>
+      </nav>
+
+      <div class="right">
+        <a href="{% url 'user_creation' %}" class="contact">Register/Sign in</a>
+      </div>
+    </header>
+    <div class="sol">
+      <div class="unde">
+        <div>
+          <h3>Industries</h3>
+          <ul>
+            <li>
+              <b>Logistics</b>
+              <p>Quoting,Tracking and maintenance</p>
+            </li>
+            <li>
+              <b>Airlines</b>
+              <p>Crew,ops and cargo support</p>
+            </li>
+            <li>
+              <b>Utilities</b>
+              <p>Billing,outage updates and grid support</p>
+            </li>
+            <li>
+              <b>Retails</b>
+              <p>Shelf management and Order fulfillment</p>
+            </li>
+            <li>
+              <b>Manufacturing</b>
+              <p>Tracking, procurement and collections</p>
+            </li>
+          </ul>
+        </div>
+        <span></span>
+        <div>
+          <h3>Functions</h3>
+          <ul>
+            <li>
+              <b>Customer support</b>
+              <p>Agent workers that resolve every contacts</p>
+            </li>
+            <li>
+              <b>Sales</b>
+              <p>Agents workers that reengage and close</p>
+            </li>
+            <li>
+              <b>Finance</b>
+              <p>Agent collectors that turn due into paid</p>
+            </li>
+            <li>
+              <b>Operations</b>
+              <p>Agent coordinators for schedules and flows</p>
+            </li>
+            <li>
+              <b>HR & Recruiting</b>
+              <p>Agent hiring and workforce coordination</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<!-- 
+    <section id="booke">
+      <form action="" class="forme">
+        <h2>Book a demo</h2>
+        <label for="email">Email: </label>
+        <input placeholder="Enter your email e.g you@domain.com" class="emai" />
+        <p class="error email-err"></p>
+        <p class="error valid"></p>
+        <label for=""
+          >Please tell us about your use case and how we can best help
+          you</label
+        >
+        <textarea
+          name=""
+          id="message"
+          placeholder="Type your message"
+        ></textarea>
+        <p class="error message-err"></p>
+        <p class="length error"></p>
+        <p class="num error"></p>
+        <div class="but">
+          <button type="submit">Book</button> -->
+        </div>
+      </form>
+    </section>
+    <section class="sucsess">
+      <div class="sucsess-header">
+        <h2>Message Sent!</h2>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </section>
+
+    <!-- <section class="sucess">
+      <div class="sucess-header">
+        <h2>Message Sent!</h2>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </section> -->
+
+    <div class="videoContainer">
+      <video
+        muted
+        autoplay
+        loop
+        playsinline
+        poster="../static/images/robimage.jpeg"
+        class="backVideo"
+      >
+        <source
+          src="https://storage.googleapis.com/ew-assets/happyrobot/happyrobot-new-hero-video-only-new-2026-02.mp4"
+          type=""
+        />
+        Your browser does not support the video.
+      </video>
+      <div class="content">
+        <h1>Put agents to work in complex environments</h1>
+        <button class="book" type="submit">Book a demo</button>
+      </div>
+    </div>
+
+    <section class="third">
+      <div class="third_h">
+        <h3>The type of work we do</h3>
+        <h2>It starts with agents</h2>
+        <p>
+          LouRobot helps enterprises put agents to work in complex environments
+        </p>
+        <button type="button">Book a demo</button>
+      </div>
+      <div class="list">
+        <div class="we">
+          <p>
+            Agents are autonomous AI workers capable of communication and
+            coordination
+          </p>
+          <span>01</span>
+        </div>
+
+        <div class="we">
+          <p>
+            To put them to work deploying at scale across core business
+            functions
+          </p>
+          <span class="two">02</span>
+        </div>
+
+        <div class="we">
+          <p>
+            Complex environments are fragmented, operationally messy,
+            exception-ridden enterprises
+          </p>
+          <span>03</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2>
+        The limit of what AI can do in your enterprise is not the model. It's
+        what the model knows about how your enterprise operates. That context is
+        only captured one way: doing the work.
+      </h2>
+    </section>
+
+    <h2 class="result">Our Results</h2>
+    <section class="forth">
+      <div class="forth_h">
+        <h3>Deployed in real world</h3>
+        <p>
+          Our focus is on deployments in complex enterprises. We've been battle
+          tested in high-staked environments full of expectation and real
+          consequences when things go wrong. We've taken AI out of the lab and
+          into the fields.
+        </p>
+      </div>
+      <div class="forth-ima">
+        <div><p>Scaling globally across regions and business units</p></div>
+        <div><p>Patnering to transform customer service</p></div>
+        <div><p>Multi-agent system with custom control tower</p></div>
+        <div><p>78% autonomous execution on critical work</p></div>
+      </div>
+      <section class="purple">
+        <h2>Put agents to work in complex environments</h2>
+        <button type="button">Book a demo</button>
+      </section>
+
+      <section class="join-form" id="contacte">
+        <h2>Contact Us</h2>
+        {% for message in messages %}
+        {% if message.tags == "error" %}
+        <p class="mistake" id="error">{{message}}</p>
+        {% else %}
+        <p class="succeed">{{message}}</p>
+        {%endif%}
+        {%endfor%}
+
+        <form action="{% url 'contact'%}" id="form" method="post">
+          {% csrf_token %}
+          <div class="name-wrap">
+            <div class="name">
+              <label for="firstname">
+                First Name <span class="asterik">*</span></label
+              >
+              <input type="text" class="firstnam" name="firstname" />
+              <p class="erro firstname-er"></p>
+              <p class="erro validity"></p>
+            </div>
+
+            <div class="name">
+              <label for="lastname"
+                >Last Name <span class="asterik">*</span></label
+              >
+              <input type="text" class="lastnam" name="lastname" />
+              <p class="erro lastname-er"></p>
+            </div>
+          </div>
+          <label for="">Email Address <span class="asterik">*</span></label>
+          <input class="ema" name="email" />
+
+          <p class="erro email-er"></p>
+          <p class="erro vali"></p>
+
+          <label for="">Message: <span class="asterik">*</span></label>
+          <textarea
+            name="message"
+            id="messag"
+            placeholder="The shorter and sharper, the better"
+          ></textarea>
+          <p class="erro message-er"></p>
+          <p class="lengt erro"></p>
+          <p class="nu erro"></p>
+          <div class="consent">
+            <!-- <div class="click">
+              <span></span>
+              <img src="{% static 'images/icon-checkbox-check.svg' %}" alt="" />
+            </div>
+            <div id="app" data-logo="{% static 'images/icon-checkbox-check.svg' %}"></div>
+            <p>I consent to being contacted by the team</p>
+          </div>
+          <p class="erro consent-err"></p> -->
+
+          <input type="submit" value="Contact us" class="submite" />
+        </form>
+      </section>
+
+      <footer>
+        <div class="imge">
+          <img src="{% static 'images/robot.jpeg' %}" alt="" />
+        </div>
+        <div class="solu">
+          <h2>Solutions</h2>
+          <div class="under">
+            <div>
+              <h3>Industries</h3>
+              <ul>
+                <li>
+                  <b>Logistics</b>
+                  <p>Quoting,Tracking and maintenance</p>
+                </li>
+                <li>
+                  <b>Airlines</b>
+                  <p>Crew,ops and cargo support</p>
+                </li>
+                <li>
+                  <b>Utilities</b>
+                  <p>Billing,outage updates and grid support</p>
+                </li>
+                <li>
+                  <b>Retails</b>
+                  <p>Shelf management and Order fulfillment</p>
+                </li>
+                <li>
+                  <b>Manufacturing</b>
+                  <p>Tracking, procurement and collections</p>
+                </li>
+              </ul>
+            </div>
+            <span></span>
+            <div>
+              <h3>Functions</h3>
+              <ul>
+                <li>
+                  <b>Customer support</b>
+                  <p>Agent workers that resolve every contacts</p>
+                </li>
+                <li>
+                  <b>Sales</b>
+                  <p>Agents workers that reengage and close</p>
+                </li>
+                <li>
+                  <b>Finance</b>
+                  <p>Agent collectors that turn due into paid</p>
+                </li>
+                <li>
+                  <b>Operations</b>
+                  <p>Agent coordinators for schedules and flows</p>
+                </li>
+                <li>
+                  <b>HR & Recruiting</b>
+                  <p>Agent hiring and workforce coordination</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="social">
+          <h2>Socials</h2>
+          <ul>
+            <li>
+              <a href="https://web.facebook.com/" target="_blank">Facebook</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </section>
+    <script src="{% static 'javascipt/index.js' %}"></script>
+  </body>
+</html>

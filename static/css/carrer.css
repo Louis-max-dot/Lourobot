@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Black+Ops+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CU+Guides&family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  padding: 0 0.3rem;
+  background-color: rgb(255, 255, 255);
+}
+.menu,
+.close {
+  display: none;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.logo img {
+  width: 20%;
+  height: 7%;
+}
+
+.navlogo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+}
+.navlogo img {
+  width: 10%;
+  height: 7%;
+}
+
+.navlogo nav ul li {
+  list-style: none;
+  display: inline;
+  margin-left: 1.5rem;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  /* text-align: center; */
+}
+.navlogo nav ul li a {
+  text-decoration: none;
+  color: grey;
+}
+.navlogo nav ul li a.active {
+  color: crimson;
+  font-weight: bold;
+  border-bottom: 2px solid gray;
+}
+
+.navlogo nav ul li a:hover {
+  color: black;
+}
+
+.logo a {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #dc2626;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.logo a:hover {
+  background: #b91c1c;
+}
+.namee {
+  text-align: start;
+  flex: 1;
+
+  font-family: "Playwrite GB J", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+main {
+  margin: 0 4.5rem;
+}
+
+.first {
+  background-color: white;
+}
+.first h1 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 6rem;
+  width: 75%;
+  line-height: 7rem;
+  margin-top: 1rem;
+}
+.first p {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem;
+  width: 40%;
+  margin-top: 1rem;
+}
+
+.team {
+  width: 100%;
+  height: 60%;
+  /* overflow: hidden; */
+}
+.team img {
+  display: block;
+  margin: 2rem auto;
+  width: 95%;
+  height: 30%;
+  object-fit: cover;
+  border-radius: 3rem;
+}
+.who {
+  scroll-margin-top: 6rem;
+}
+
+.who h2 {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 4rem;
+}
+.who p {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.quote p {
+  background-color: darksalmon;
+  padding: 5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+}
+.value {
+  scroll-margin-top: 7rem;
+}
+.value h2 {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 4rem;
+}
+.value-cont {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  background-color: white;
+  width: 50%;
+}
+
+.ext {
+  display: flex;
+}
+.est img {
+  width: 100%;
+  height: 100%;
+}
+.est {
+  flex: 1;
+}
+.es {
+  flex: 1;
+  background-color: white;
+}
+.es h3 {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.7rem;
+  margin-left: 1.3rem;
+  margin-top: 3rem;
+}
+.es p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 80%;
+  margin-left: 1.3rem;
+}
+.major {
+  display: flex;
+}
+.major-cont {
+  flex: 1;
+  background-color: white;
+}
+.major-cont h3 {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.7rem;
+  margin-top: 3rem;
+}
+.major-cont p {
+  width: 80%;
+}
+.major-ima {
+  flex: 1;
+}
+.major-ima img {
+  width: 100%;
+  height: 100%;
+}
+
+.join {
+  display: flex;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+.join h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.joine {
+  flex: 1;
+}
+.joine p {
+  width: 50%;
+  font-weight: 200;
+  font-size: larger;
+}
+.join-form {
+  flex: 1;
+  background-color: burlywood;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid powderblue;
+  border-radius: 0.3rem;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+input:focus {
+  border: 2px solid purple;
+}
+
+input.invalid {
+  border: 1px solid red;
+}
+.error {
+  color: red;
+  margin-bottom: 0.5rem;
+}
+textarea {
+  width: 100%;
+
+  padding: 0.7rem;
+  height: 5rem;
+  outline: none;
+  border-radius: 0.3rem;
+  border: 1px solid powderblue;
+  resize: none;
+}
+
+textarea:focus {
+  border: 2px solid purple;
+}
+
+textarea.invalid {
+  border: 1px solid red;
+}
+input[type="submit"] {
+  margin-top: 1rem;
+  font-weight: 400;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1.1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-family: "Alata", serif;
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+/* input[type="submit"]{
+    background-color: var(--green-medium);
+    color: var(--White);
+    cursor: pointer;
+    border: none;
+    padding: 1rem 0;
+    margin-top: 3rem;
+} */
+
+input[type="submit"]:hover {
+  background-color: rgb(53, 33, 7);
+}
+
+.sucsess-header {
+  /* display: flex; */
+  /* gap: 0.5rem; */
+  /* align-items: center; */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.sucsess {
+  background-color: hsl(169, 50%, 56%);
+  color: var(--White);
+  width: 29%;
+  height: 8rem;
+  margin: 3% auto 0 auto;
+  padding: 2rem;
+  border-radius: 0.7rem;
+  display: none;
+}
+.sucsess p {
+  text-align: center;
+}
+.ee {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #ef4444;
+  border-radius: 6px;
+  padding: 12px 16px;
+  /* margin: 15px auto; */
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 2px;
+  /* align-items: center; */
+}
+
+@media (max-width: 480px) {
+  .menu {
+    display: block;
+  }
+  body {
+    position: relative;
+  }
+
+  .navlogo nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: hsla(240, 100%, 5%, 0.4);
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    transform: translateX(-150%);
+  }
+  .navlogo nav ul li {
+    display: block;
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+  .navlogo nav ul {
+    background-color: yellowgreen;
+    width: 60%;
+    padding: 2rem;
+  }
+  .navlogo nav ul li a {
+    color: black;
+  }
+  .close {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navlogo img {
+    width: 15%;
+  }
+
+  main {
+    margin: 0 1.5rem;
+  }
+  /* .first{
+    background-color: brown;
+  } */
+  .first h1 {
+    font-size: 2.5rem;
+    width: 100%;
+    line-height: normal;
+    margin-top: 3rem;
+  }
+  .first p {
+    width: 100%;
+  }
+  .team img {
+    border-radius: 1rem;
+  }
+  .who h2 {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+  }
+  .quote p {
+    padding: 2rem;
+  }
+  .value h2 {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+  }
+  .value-cont {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .ext {
+    flex-direction: column;
+  }
+  .est img {
+    border-radius: 1rem;
+  }
+  .es h3 {
+    margin-left: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  .es p {
+    margin: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+  .major {
+    flex-direction: column-reverse;
+  }
+  .major-cont h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+    width: 100%;
+    line-height: 2rem;
+  }
+  .major-cont p {
+    margin-bottom: 1rem;
+  }
+  .major-ima img {
+    border-radius: 1rem;
+    margin-top: 2rem;
+  }
+  .join {
+    flex-direction: column;
+  }
+  .join h2 {
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
+  }
+  .joine p {
+    width: 100%;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .join-form {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  header {
+    margin-top: 1rem;
+  }
+  .sucsess {
+    /* margin: 3% auto 0 auto;  */
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 50%;
+    height: auto;
+  }
+  .sucsess p {
+    text-align: center;
+  }
+}

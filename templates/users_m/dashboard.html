@@ -1,0 +1,189 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LouRobot Careers</title>
+    <link rel="stylesheet" href="{% static 'css/carrer.css' %}" />
+  </head>
+  <body>
+    <!-- <section class="sucsess">
+      <div class="sucsess-header">
+        <h2>Application Sent!</h2>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </section> -->
+    <header class="navlogo">
+      <div class="logo">
+        <img src="{% static 'images/robot.jpeg' %}" alt="" />
+        <a href="{% url 'logout' %}">Logout</a>
+      </div>
+
+      <div class="namee">
+        <h2>Welcome on board,{{request.user.username}}</h2>
+      </div>
+
+      <nav>
+        <ul>
+          <div class="close">
+            <img src="{% static 'images/icon-menu-close.svg' %}" alt="" />
+          </div>
+          <li><a href="{% url 'home' %}" target="_blank">Home</a></li>
+          <li><a href="#who">Who we are</a></li>
+          <li><a href="#our">Our values</a></li>
+          <li><a href="" class="active">Careers</a></li>
+        </ul>
+      </nav>
+
+      <img src="{% static 'images/icon-menu.svg' %}" alt="" class="menu" />
+    </header>
+    <main>
+      <div class="first">
+        <h1>Join us to change how work gets done</h1>
+        <p>
+          LouRobot helps enterprises put agents to work in complex
+          environments.Join our mission!
+        </p>
+      </div>
+
+      <div class="team">
+        <img src="{% static 'images/Our team.jpg'%}" alt="" />
+      </div>
+
+      <section id="who" class="who">
+        <h2>Who we are</h2>
+        <p>
+          Every enterprise is, at its core, an attempt to solve a coordination
+          problem. How do you get thousands of people, across dozens of
+          functions, working toward the same outcome? The answer, built up over
+          decades, was process. Rules, hierarchies, handoff protocols, systems
+          of record. Structures designed to compensate for what individual
+          humans can't do: hold everything in memory, be in two places at once,
+          never drop a thread. When agents became capable enough to handle
+          genuine complexity, most deployments placed them into an enterprise
+          context that was never designed for them: fragmented systems, no
+          shared memory, no thread connecting this conversation to the last one.
+          The intelligence was real, but the infrastructure underneath it wasn't
+          built to sustain it. More AI producing more output doesn't challenge
+          the fundamental assumption of enterprise architecture. It just
+          accelerates the same loss. HappyRobot decided to build something
+          different: not a better tool for the enterprise as it exists, but the
+          foundation for a fundamentally different one.
+        </p>
+      </section>
+
+      <div class="quote">
+        <p>
+          "The machines that matter aren't the ones that analyze. They're the
+          ones that act." by HappyRobot
+        </p>
+      </div>
+
+      <section id="our" class="value">
+        <h2>Our Values</h2>
+        <p class="value-cont">
+          At LouRobot, we don't chase ideas, we ship systems that work, in
+          production, every single day. We take ownership end-to-end, move with
+          urgency, and hold a high bar for what "done" means. We've come
+          together from across the world, not just for the ambition of the
+          problems we solve, but for the standard we hold ourselves to while
+          solving them.
+        </p>
+        <div class="ext">
+          <div class="est">
+            <img src="{% static 'images/Extreme.jpg' %}" alt="" />
+          </div>
+          <div class="es">
+            <h3>Extreme ownership</h3>
+            <p>
+              We take responsibility for our work, our outcomes, and the
+              company. Pick a problem, take it from idea to live, fully on you.
+            </p>
+            <h3>CraftmanShip</h3>
+            <p>
+              We put care into every customer interaction, every workflow, every
+              line of code. The work is judged by what's running.
+            </p>
+          </div>
+        </div>
+
+        <div class="major">
+          <div class="major-cont">
+            <h3>We are "majos"</h3>
+            <p>
+              A Spanish word, helpful, warm, low-ego. We have fun together and
+              disagree without making it personal.
+            </p>
+            <h3>Talent density and meritocracy</h3>
+            <p>
+              We hire people who raise the average. Ability beats seniority. The
+              best idea wins, regardless of who said it.
+            </p>
+          </div>
+          <div class="major-ima">
+            <img src="{% static 'images/We are.jpg' %}" alt="" />
+          </div>
+        </div>
+
+        <div class="ext">
+          <div class="est">
+            <img src="{% static 'images/thinking.jpg' %}" alt="" />
+          </div>
+          <div class="es">
+            <h3>First-principle thinking</h3>
+            <p>
+              Strip the problem to its basic facts, ignore dogma, and design
+              from scratch. No cargo culting.
+            </p>
+            <h3>Urgency with focus</h3>
+            <p>
+              Move fast, in the right direction. Maximum impact in the shortest
+              time. Velocity compounds; bureaucracy never does.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="join">
+        <div class="joine">
+          <h2>Join Our Missoin</h2>
+          <p>
+            Don't see the right role? We're selective, but we always make room
+            for exceptional people. Tell us what you'd build here, and why now.
+          </p>
+        </div>
+        <div class="join-form">
+          <div id="error">
+            {% if messages %} {% for message in messages %}
+            <p class="ee">{{message}}</p>
+            {%endfor%} {%endif%}
+          </div>
+
+          <form action="" id="form" method="post">
+            {% csrf_token %}
+            <label for="email">Email:</label>
+            <input placeholder="you@domain.com" class="emai" name="email" />
+            <p class="error email-err"></p>
+            <p class="error valid"></p>
+            <label for="">What will you like to build with us?</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="The shorter and sharper, the better"
+            ></textarea>
+            <p class="error message-err"></p>
+            <p class="length error"></p>
+            <p class="num error"></p>
+
+            <input
+              type="submit"
+              value="Send application & See Training List"
+              class="submite"
+            />
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

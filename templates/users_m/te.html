@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="post">
+      {% csrf_token %}
+      <label for="email">Email:</label>
+      <input placeholder="you@domain.com" class="emai" name="email" />
+      <p class="error email-err"></p>
+      <p class="error valid"></p>
+      <label for="">What will you like to build with us?</label>
+      <textarea
+        name="message"
+        id="message"
+        placeholder="The shorter and sharper, the better"
+      ></textarea>
+      <p class="error message-err"></p>
+      <p class="length error"></p>
+      <p class="num error"></p>
+
+      <input type="submit" value="Send application" class="submite" />
+    </form>
+  </body>
+</html>

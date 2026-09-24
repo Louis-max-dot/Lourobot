@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    /* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Flexbox Centering */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Form Container */
+.login-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  padding: 2.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.login-container p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Form Elements */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.input-group input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Submit Button */
+.login-btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+.signup{
+  text-align: center;
+  margin-top: 22px;
+}
+.signup a{
+  text-decoration: none;
+  font-weight: 600;
+  color: #2c4c41;
+}
+.signup a:hover{
+  text-decoration: underline;
+}
+.success{
+    display: none;
+}
+.error{
+ color: white;
+  text-align: center;
+  /* justify-content: center; */
+  background-color: yellow;
+    padding: 0.5rem;
+  border-radius: 6px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 2rem 1.5rem;
+  }
+  
+  .login-container h2 {
+    font-size: 1.5rem;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <div class="login-wrapper">
+    <div class="login-container">
+      <h2>Welcome Back</h2>
+      <p>Please enter your details to sign in.</p>
+      {% for message in messages %}
+      {% if message.tags == "success" %}
+      <p class = "success" >{{message}}</p>
+      {%else%}
+      <p class ="error">{{message}}</p>
+      {% endif%}
+      {% endfor %}
+      
+      <form action="" method="post" class="login-form">
+        {% csrf_token %}
+        
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+
+        
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+
+        <button type="submit" class="login-btn">Sign In</button>
+        <p class="signup">Don't have an account?  <a href="{% url 'user_creation' %}">Sign up</a></p>
+       
+        
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
